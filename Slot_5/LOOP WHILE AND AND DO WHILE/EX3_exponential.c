@@ -51,6 +51,12 @@ int main() {
         }
         
     }
+
+    if (exponent_number_clone < 0)
+    {
+        /* still thinking */
+    }
+    
     
     
     printf("The result of %d^%d is: %d\n", number_A, exponent_number_clone, exponential_result);
