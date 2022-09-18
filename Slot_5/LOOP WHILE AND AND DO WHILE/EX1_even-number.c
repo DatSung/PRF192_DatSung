@@ -2,6 +2,7 @@
 
 int main() {
     int number_N, number_N_clone;
+    const int level_number = 100;
 
     printf("Please enter a number to count: ");
     scanf("%d", &number_N);
@@ -10,7 +11,7 @@ int main() {
 
     printf("The string of numbers mod 2 equal to 0 is (While): ");
 
-    while (number_N <= 100)
+    while (number_N <= level_number)
     {   
         if (number_N % 2 == 0)
         {
@@ -22,7 +23,6 @@ int main() {
     printf("\n");
     printf("The string of numbers mod 2 equal to 0 is (Do_While): ");
 
-    while (number_N <= 100)
 
     do
     {
@@ -31,7 +31,7 @@ int main() {
             printf("%d ", number_N_clone);
         }
         number_N_clone += 1;
-        
-    } while (number_N_clone <= 100);
+
+    } while (number_N_clone <= level_number);
 
 }
