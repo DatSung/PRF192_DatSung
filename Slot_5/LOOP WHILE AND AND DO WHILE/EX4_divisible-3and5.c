@@ -10,7 +10,7 @@ int main() {
     printf("Press (1) to use While, press (2) to use Do While: ");
     scanf("%d", &key_control);
 
-    printf("The string of number fomr %d to %d divisible by 3 and 5 is: ", number_A, number_B);
+    printf("The string of number from %d to %d divisible by 3 and 5 is: ", number_A, number_B);
 
     if (key_control == 1)
     {
