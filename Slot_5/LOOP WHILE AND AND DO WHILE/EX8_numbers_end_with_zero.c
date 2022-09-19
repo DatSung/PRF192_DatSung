@@ -18,4 +18,4 @@ int main() {
 
     } while (i <= number_N);
     
-}
+} 
