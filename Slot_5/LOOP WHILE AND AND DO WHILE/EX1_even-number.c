@@ -33,7 +33,6 @@ int main() {
     printf("\n");
     printf("The string of numbers mod 2 equal to 0 is (Do_While): ");
 
-
     do
     {
         if (number_N_clone % 2 == 0)
