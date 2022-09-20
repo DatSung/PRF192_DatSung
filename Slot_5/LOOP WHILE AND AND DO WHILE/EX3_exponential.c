@@ -81,7 +81,7 @@ int main() {
 
         exponential_result = 1 / exponential_result;
     }
-    
-    printf("The result of %d^%d is: %lf\n", number_A, -exponent_number_clone, exponential_result);
-    
+        
+    printf("The result of is: %lf\n", exponential_result);
+
 }

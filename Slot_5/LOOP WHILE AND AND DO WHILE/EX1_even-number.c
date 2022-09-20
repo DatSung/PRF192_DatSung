@@ -6,16 +6,8 @@ int main() {
 
     printf("Please enter a number to count: ");
 
-    do
-    {
-        scanf("%d", &number_N);
-        if (number_N > 10)
-        {
-            printf("Enter again: ");
-        }
-        
-    } while (number_N > 10);
-    
+    scanf("%d", &number_N);   
+    printf("Enter again: ");
 
     number_N_clone = number_N;
 

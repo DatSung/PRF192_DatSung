@@ -9,7 +9,7 @@ int main() {
     
     printf("The string of number is: ");
 
-    for (i = -number_N; i <= number_N; i++)
+    for (i = number_N; i >= -number_N; i--)
     { 
         printf("%d ", i);
     }
