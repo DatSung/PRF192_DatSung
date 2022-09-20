@@ -3,13 +3,14 @@
 int main() {
 
     int number_A, number_B, sum_AtoB = 0;
+    int i;
 
     printf("Please enter two numbers to caculate: ");
     scanf("%d %d", &number_A, &number_B); 
 
     printf("The string of numbers mod 3 = 0 is : ");
 
-    for (int i = number_A; i <= number_B; i++)
+    for (i = number_A; i <= number_B; i++)
     {
         if (i % 3 == 0)
         {   

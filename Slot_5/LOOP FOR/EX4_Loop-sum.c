@@ -2,11 +2,12 @@
 
 int main() {
     int number_A, number_B, sum_AtoB = 0;
+    int i;
 
     printf("Please enter two numbers to caculate: ");
     scanf("%d %d", &number_A, &number_B);
 
-    for (int i = number_A; i <= number_B; i++)
+    for (i = number_A; i <= number_B; i++)
     {
         sum_AtoB += i;
     }

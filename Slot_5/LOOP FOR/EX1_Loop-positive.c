@@ -2,6 +2,7 @@
 
 int main() {
     int number_N;
+    int i;
 
     printf("Please enter a number to count: ");
 
@@ -16,7 +17,7 @@ int main() {
     } while (number_N < 0);
     
     printf("The string of numbers is: ");
-    for (int i = 1; i <= number_N; i++)
+    for (i = 1; i <= number_N; i++)
     {
         printf("%d ", i);
     }

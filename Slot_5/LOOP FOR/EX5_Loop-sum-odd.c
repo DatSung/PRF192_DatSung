@@ -3,11 +3,12 @@
 int main() {
 
     int number_N, sum_odd_N = 0;
+    int i;
     
     printf("Please enter a number to count: ");
     scanf("%d", &number_N);
 
-    for (int i = 0; i <= number_N; i++)
+    for (i = 0; i <= number_N; i++)
     {
         if (i % 2 != 0)
         {
