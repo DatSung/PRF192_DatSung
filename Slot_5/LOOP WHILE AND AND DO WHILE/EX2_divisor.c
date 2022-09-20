@@ -16,6 +16,7 @@ int main() {
             if (number_N_clone % number_N == 0)
             {
                 sum_divisors += 1;
+                printf("%d \n", number_N);
             }
             number_N -= 1;
         }
@@ -28,6 +29,7 @@ int main() {
             if (number_N_clone % number_N == 0)
             {
                 sum_divisors += 1;
+                printf("%d \n", number_N);
             }
             number_N -= 1;
         } while (number_N <= number_N_clone && number_N >= 0);
