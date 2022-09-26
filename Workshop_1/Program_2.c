@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main() {
-    double dependent, tF = 0, tI = 0, income, income_Tax = 0;
+    double dependent, tF = 0, tI = 0, income;
     const double PA = 9000000, PD = 3600000;
 
     printf("Enter your income value: ");
@@ -11,7 +11,7 @@ int main() {
     scanf("%lf", &dependent);
 
     tF = 12 * (PA + (dependent * PD));
-    tI = fabs(income - tF);
+    tI = income - tF;
 
     if (tI <= 0)
     {   
