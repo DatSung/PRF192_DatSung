@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <ctype.h>  // Thư viện để dùng chuỗi in hoa
-#include <string.h> // Thư viện để khai báo chuỗi
+#include <ctype.h>  
+#include <string.h>
 
 int main() {
 
@@ -8,20 +8,20 @@ int main() {
     int vowels = 0, consonants = 0, others = 0, str_len, strovowels_len, stroconsonants_len ;
     int i, j;
     
-    // Nhập vào chuỗi
+    // Enter strings
     printf("Enter a sentence: ");
     gets(str);
 
-    // Lấy chiều dài của chuỗi để bỏ vào vòng lặp for
+    // Get length
     str_len = strlen(str);
 
-    // Dùng vòng lặp for để biến chuỗi thành chuỗi in hoa
+    // Uppercase
     for (i = 0; i < str_len; i++)
     {
         capital_str[i] = toupper(str[i]);
     }
 
-    // Bộ đếm
+    // Count
     for (i = 0; i < str_len; i++)
     {
         if (capital_str[i] >= 'A' && capital_str[i] <= 'Z')
@@ -53,7 +53,7 @@ int main() {
         } 
     }
 
-    // In ra kết quả
+    // Print result
     printf("Number of vowel are: %d; %s\n", vowels, str_o_vowels);
     printf("Number of consonants are: %d; %s\n", consonants, str_o_consonants);
     printf("Number of others are: %d\n", others);
