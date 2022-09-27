@@ -5,7 +5,7 @@
 int main() {
 
     char str[255], capital_str[255], str_o_vowels[255], str_o_consonants[255];
-    int vowels = 0, consonants = 0, others = 0, str_len, strovowels_len, stroconsonants_len ;
+    int vowels = 0, consonants = 0, others = 0, str_len;
     int i, j;
     
     // Enter strings
