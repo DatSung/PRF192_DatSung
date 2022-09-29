@@ -26,6 +26,7 @@ int main() {
 }
 
 int getRelPos(double x_enter, double y_enter, double r_enter) {
+    
     double d2 = (x_enter * x_enter) + (y_enter * y_enter);
     double r2 = (r_enter * r_enter);
 
