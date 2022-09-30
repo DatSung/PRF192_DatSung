@@ -1,88 +1,42 @@
 #include <stdio.h>
-#include <time.h>
-
-int checkDate();
+#include <math.h>
 
 int main() {
+    double dependent, tF = 0, tI = 0, income;
+    const double PA = 9000000, PD = 3600000;
 
-    int dd, mm, yy;
+    printf("Enter your income value: ");
+    scanf("%lf", &income);
+    printf("Enter your number of dependent: ");
+    scanf("%lf", &dependent);
 
-    printf("Enter date form dd/mm/yy: ");
-    scanf("%d/%d/%d", &dd, &mm, &yy);
+    tF = 12 * (PA + (dependent * PD));
+    tI = income - tF;
 
-    if (checkDate(dd,mm,yy) == 0)
-    {
-        printf("Date is valid\n");
-
-    } else if (checkDate(dd,mm,yy) == 1)
-    {
-        printf("Day is invalid\n");
-        
-    } else if (checkDate(dd,mm,yy) == 2)
-    {
-        printf("Month is in valid\n");
-
-    }else if (checkDate(dd,mm,yy) == 3)
-    {
-        printf("Year is invalid\n");
-    }
-    
-}
-
-int checkDate(int dd_enter, int mm_enter, int yy_enter) {
-
-    // Check year
-    if (yy_enter >= 1900 && yy_enter <= 9999)
+    if (tI <= 0)
     {   
-        // Check month
-        if (mm_enter >= 1 && mm_enter <= 12)
-        {   
-            // Check day
-            if ((dd_enter >= 1 && dd_enter <= 31) && (mm_enter == 1 || mm_enter == 3 || mm_enter == 5 
-
-                || mm_enter == 7 || mm_enter == 8 || mm_enter == 10 || mm_enter == 12))
-            {
-
-                return 0;
-                
-            } else if ((dd_enter >= 1 && dd_enter <= 30) && (mm_enter == 4 
-
-                || mm_enter == 6 || mm_enter == 9 || mm_enter == 11))
-            {
-                
-                return 0;
-
-            } else if ((dd_enter >= 1 && dd_enter <= 28)  && (mm_enter == 2))
-            {
-                
-                return 0;
-
-            } else if ((dd_enter == 29 && mm_enter == 2) && (yy_enter % 400 == 0 
-
-                || (yy_enter % 4 == 0 && yy_enter && 100 != 0)))
-            {
-                
-                return 0;
-
-            } else
-            {
-
-                return 1;
-
-            }
-            
-        } else 
-        {
-
-            return 2;
-
-        }
-        
+        printf("Your tax-free income is: %lf\n", tF);
+        printf("Your taxable income is: %lf\n", tI);
+        printf("Your income tax is 0\n");
+    } else if (tI <= 5000000)
+    {   
+        printf("Your tax-free income is: %lf\n", tF);
+        printf("Your taxable income is: %lf\n", tI);
+        printf("Your income tax is: %.2f\n", tI * 0.05);
+    } else if (tI <= 10000000)
+    {   
+        printf("Your tax-free income is: %lf\n", tF);
+        printf("Your taxable income is: %lf\n", tI);
+        printf("Your income tax is: %.2lf\n", tI * 0.1);
+    } else if (tI <= 18000000)
+    {   
+        printf("Your tax-free income is: %lf\n", tF);
+        printf("Your taxable income is: %lf\n", tI);
+        printf("Your income tax is: %.2lf\n", tI * 0.15);
     } else
-    {
-
-        return 3;
-
+    {   
+        printf("Your tax-free income is: %lf\n", tF);
+        printf("Your taxable income is: %lf\n", tI);
+        printf("Your income tax is: %.2lf\n", tI * 0.2);
     }
-    
 }
