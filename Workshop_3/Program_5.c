@@ -4,12 +4,17 @@ double fibo();
 
 int main() {
 
-    int n;
+    int n, i;
 
     printf("Enter a number to print out Fibonacci: ");
     scanf("%d", &n);
 
-    printf("%lf", fibo(n));
+    for (i = 1; i <= n; i++)
+    {   
+        printf("%d ", i);
+        printf("%lf\n", fibo(i));
+          
+    }    
 
     getchar();
     return 0;
