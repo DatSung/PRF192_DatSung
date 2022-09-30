@@ -16,8 +16,6 @@ int main() {
     {
         printf("The number is not belong to Fibonacci");
     }
-    
-    
 
 }
 
