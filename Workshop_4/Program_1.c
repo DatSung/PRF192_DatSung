@@ -15,6 +15,7 @@ int main() {
     printf("Please choos your options: \n");
     printf("(1) Check prime number\n");
     printf("(2) Find min and max of many numbers\n");
+    printf("Press any key except 1 and 2 to quit\n");
 
     scanf("%d", &key_control);
     
@@ -46,10 +47,8 @@ int main() {
 
         printf("The min number is : %d\n", min(number_check));
 
-
-
-
     default:
+        printf("QUIT\n");
         break;
     }
 
@@ -97,23 +96,16 @@ int min(int number_check) {
             min_Number = number_check % 10;
         }
 
-        if (number_check % 10 != 0)
-        {
-            number_check = number_check / 10;
-            printf("%d\n", number_check % 10);
-        }
+        number_check = number_check / 10;
+        printf("%d\n", number_check % 10);
 
-        if (min_Number > (number_check % 10))
+        if ( (min_Number > (number_check % 10)) && (number_check / 10 != 0) )
         {
             min_Number = number_check % 10;
         }
-
-        if (number_check % 10 != 0)
-        {
-            number_check = number_check / 10;
-            printf("%d\n", number_check % 10);
-        }
-        
+            
+        number_check = number_check / 10;
+        printf("%d\n", number_check % 10);
 
     }
 
