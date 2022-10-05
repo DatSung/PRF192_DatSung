@@ -38,11 +38,13 @@ int main() {
 
     case 2:
 
-        printf("You choose find min and max of many numbers");
-        printf("Please enter the number: \n");
+        printf("You choose find min and max of many numbers\n");
+        printf("Please enter the number: ");
         scanf("%d", &number_check);
 
         printf("The max number is: %d\n", max(number_check));
+
+        printf("The min number is : %d\n", min(number_check));
 
 
 
@@ -54,52 +56,64 @@ int main() {
 }
 
 // MAX NUMBER CHECKER FUNCTION
-int max(int number_check){
+int max(int number_check) {
     
-    int number_mod_A, number_mod_B, result;
+    int max_Number = 0;
 
-    do
+    
+    while (number_check > 0)
     {       
-        number_mod_A = number_check % 10;
-        number_check = number_check / 10;
-        number_mod_B = number_check % 10;
-        number_check = number_check / 10;
-
-        if (number_mod_A > number_mod_B)
+        if (max_Number < (number_check % 10))
         {
-            result = number_mod_A;
-
-        } else if (number_mod_A < number_mod_B)
-        {
-            result = number_mod_B;
-
-        } else
-        {
-            result = number_mod_A;
+            max_Number = (number_check % 10);
         }
+        
+        number_check = number_check / 10;
+        printf("%d\n", number_check % 10);
 
-    } while (number_check != 0);
+        if (max_Number < (number_check % 10))
+        {
+            max_Number = number_check % 10;
+        }
+        
+        number_check = number_check / 10;
+        printf("%d\n", number_check % 10);
 
-    return result;        
+    }
+
+    return max_Number;        
 
 }
 
 // MIN NUMBER CHECKER FUNCTION
-int min(int number_A, int number_B) {
+int min(int number_check) {
     
-    if (number_A < number_B)
-    {
-        return number_A;
+    int min_Number = (number_check % 10);
 
-    } else if (number_B < number_A)
-    {
-        return number_B;
+    printf("%d\n", min_Number);
+    
+    while (number_check > 0)
+    {       
+        if (min_Number > (number_check % 10))
+        {
+            min_Number = number_check % 10;
+        }
 
-    } else
-    {
-        return number_A;
+        number_check = number_check / 10;
+        printf("%d\n", number_check % 10);
+
+        if (min_Number > (number_check % 10))
+        {
+            min_Number = number_check % 10;
+        }
+        
+        number_check = number_check / 10;
+        printf("%d\n", number_check % 10);
+
     }
-    
+
+    return min_Number;        
+
 }
 
 // PRIME CHECKER FUNCTION
