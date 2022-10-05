@@ -9,8 +9,8 @@ int min();
 // MAIN FUNCTION
 int main() {
 
-    int key_control;
-    int number_check;
+    int key_control = 0;
+    int number_check = 0;
     
     printf("Please choos your options: \n");
     printf("(1) Check prime number\n");
@@ -89,8 +89,6 @@ int max(int number_check) {
 int min(int number_check) {
     
     int min_Number = (number_check % 10);
-
-    printf("%d\n", min_Number);
     
     while (number_check > 0)
     {       
@@ -99,16 +97,23 @@ int min(int number_check) {
             min_Number = number_check % 10;
         }
 
-        number_check = number_check / 10;
-        printf("%d\n", number_check % 10);
+        if (number_check % 10 != 0)
+        {
+            number_check = number_check / 10;
+            printf("%d\n", number_check % 10);
+        }
 
         if (min_Number > (number_check % 10))
         {
             min_Number = number_check % 10;
         }
+
+        if (number_check % 10 != 0)
+        {
+            number_check = number_check / 10;
+            printf("%d\n", number_check % 10);
+        }
         
-        number_check = number_check / 10;
-        printf("%d\n", number_check % 10);
 
     }
 
