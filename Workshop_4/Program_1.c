@@ -14,7 +14,7 @@ int main() {
     
     do
     {
-        printf("Please choos your options: \n");
+        printf("Please choose your options: \n");
         printf("(1) Check prime number\n");
         printf("(2) Find min and max of many numbers\n");
         printf("Press any key except 1 and 2 to quit\n");
