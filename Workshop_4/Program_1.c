@@ -12,45 +12,51 @@ int main() {
     int key_control = 0;
     int number_check = 0;
     
-    printf("Please choos your options: \n");
-    printf("(1) Check prime number\n");
-    printf("(2) Find min and max of many numbers\n");
-    printf("Press any key except 1 and 2 to quit\n");
-
-    scanf("%d", &key_control);
-    
-    switch (key_control)
+    do
     {
-    case 1: 
-        
-        printf("You choose check prime number\n");
-        printf("PLease enter a number to check: ");
-        scanf("%d", &number_check);
+        printf("Please choos your options: \n");
+        printf("(1) Check prime number\n");
+        printf("(2) Find min and max of many numbers\n");
+        printf("Press any key except 1 and 2 to quit\n");
 
-        if (primeChecker(number_check) == 1)
+        scanf("%d", &key_control);
+    
+        switch (key_control)
         {
-            printf("The number is a prime number\n");
-        } else
-        {
-            printf("The number is not a prime number\n");
+            case 1: 
+        
+                printf("You choose check prime number\n");
+                printf("PLease enter a number to check: ");
+                scanf("%d", &number_check);
+
+                if (primeChecker(number_check) == 1)
+                {
+                    printf("The number is a prime number\n");
+                } else
+                {
+                    printf("The number is not a prime number\n");
+                }
+
+            break;
+
+            case 2:
+
+                printf("You choose find min and max of many numbers\n");
+                printf("Please enter the number: ");
+                scanf("%d", &number_check);
+
+                printf("The max number is: %d\n", max(number_check));
+
+                printf("The min number is : %d\n", min(number_check));
+
+            default:
+                printf("QUIT\n");
+            break;
         }
 
-        break;
-
-    case 2:
-
-        printf("You choose find min and max of many numbers\n");
-        printf("Please enter the number: ");
-        scanf("%d", &number_check);
-
-        printf("The max number is: %d\n", max(number_check));
-
-        printf("The min number is : %d\n", min(number_check));
-
-    default:
-        printf("QUIT\n");
-        break;
-    }
+    } while (key_control >= 1 && key_control <= 2);
+    
+    
 
 }
 
@@ -74,9 +80,6 @@ int max(int number_check) {
         {
             max_Number = number_check % 10;
         }
-        
-        number_check = number_check / 10;
-        printf("%d\n", number_check % 10);
 
     }
 
@@ -103,9 +106,6 @@ int min(int number_check) {
         {
             min_Number = number_check % 10;
         }
-            
-        number_check = number_check / 10;
-        printf("%d\n", number_check % 10);
 
     }
 
