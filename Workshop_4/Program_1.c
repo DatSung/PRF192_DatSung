@@ -129,7 +129,6 @@ int primeChecker(int number_check) {
         {
             return 0;
         }
-        
     }
     return 1;
 }
