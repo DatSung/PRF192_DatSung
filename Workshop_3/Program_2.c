@@ -20,7 +20,7 @@ int main() {
         
     } else if (checkDate(dd,mm,yy) == 2)
     {
-        printf("Month is in valid\n");
+        printf("Month is invalid\n");
 
     }else if (checkDate(dd,mm,yy) == 3)
     {
