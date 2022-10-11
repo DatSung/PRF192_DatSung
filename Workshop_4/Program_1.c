@@ -116,14 +116,14 @@ int min(int number_check) {
 // PRIME CHECKER FUNCTION
 int primeChecker(int number_check) {
 
-    int halfnumber = sqrt(number_check);
+    int sqrtnumber = sqrt(number_check);
     int i;
 
     if (number_check < 2)
     {
         return 0;
     }
-    for (i = 2; i <= halfnumber; i++)
+    for (i = 2; i <= sqrtnumber; i++)
     {
         if (number_check % i == 0)
         {
