@@ -53,6 +53,5 @@ void stringPrint(int digit_string) {
     for (i = 0; i < digit_string; i++)
     {
         printf("%d", storage[i]);
-    }
-    
+    }  
 }
