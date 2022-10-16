@@ -9,11 +9,12 @@ void stringPrint();
 int main() {    
 
     int digit_string;
-
+    printf("Please enter digit of string: ");
     scanf("%d", &digit_string);
-
+    printf("Please enter string of number: ");
     stringInput(digit_string);
     stringSoft(digit_string);
+    printf("String after soft is: ");
     stringPrint(digit_string);
 
 }
@@ -52,6 +53,6 @@ void stringPrint(int digit_string) {
 
     for (i = 0; i < digit_string; i++)
     {
-        printf("%d", storage[i]);
+        printf("%d ", storage[i]);
     }  
 }
