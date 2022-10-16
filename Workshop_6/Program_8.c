@@ -3,7 +3,7 @@
 int storage[255];
 
 void stringInput();
-void stringSoft();
+void stringSort();
 void stringPrint();
 
 int main() {    
@@ -13,7 +13,7 @@ int main() {
     scanf("%d", &digit_string);
     printf("Please enter string of number: ");
     stringInput(digit_string);
-    stringSoft(digit_string);
+    stringSort(digit_string);
     printf("String after soft is: ");
     stringPrint(digit_string);
 
@@ -29,7 +29,7 @@ void stringInput(int digit_string) {
     }
 }
 
-void stringSoft(int digit_string) {
+void stringSort(int digit_string) {
 
     int i, j, trade;
 
