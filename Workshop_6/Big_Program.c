@@ -5,11 +5,13 @@ int key_control, digit_string, i;
 int digit_string_clone_begin = 0;
 int total_digit_string;
 int key_search;
+int min_Value, max_Value;
 
 void menu();
 void stringInput();
 void stringSearch();
 void stringShow();
+void stringFrto();
 
 int main() {
 
@@ -27,6 +29,7 @@ int main() {
                 scanf("%d", &digit_string);
                 printf("Enter %d values in string: ", digit_string);
                 stringInput(digit_string);
+                printf("\n");
 
                 break;
 
@@ -36,6 +39,8 @@ int main() {
                 printf("Please enter a key word to search: ");
                 scanf("%d", &key_search);
                 stringSearch(key_search);
+                printf("\n");
+
                 break;
     
             case 3:
@@ -43,10 +48,18 @@ int main() {
                 printf("\n");
                 printf("Print out all values of string: ");
                 stringShow(total_digit_string);
+                printf("\n");
 
                 break;
 
             case 4:
+                
+                printf("\n");
+                printf("Please enter min value and max value: ");
+                scanf("%d %d", &min_Value, &max_Value);
+                printf("The values of string between %d and %d is: ", min_Value, max_Value);
+                stringFrto(min_Value, max_Value);
+                printf("\n");
 
                 break;
 
@@ -110,5 +123,16 @@ void stringShow(int total_digit_string) {
     for (i = 0; i < total_digit_string; i++)
     {
         printf("%d ", storage[i]);
+    }
+}
+
+void stringFrto(int min_Value, int max_Value) {
+
+    for (i = 0; i < total_digit_string; i++)
+    {
+        if (storage[i] >= min_Value && storage[i] <= max_Value)
+        {
+            printf("%d ", storage[i]);
+        } 
     }
 }
