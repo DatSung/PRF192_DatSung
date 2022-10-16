@@ -12,6 +12,7 @@ void stringInput();
 void stringSearch();
 void stringShow();
 void stringFrto();
+void stringSoft();
 
 int main() {
 
@@ -135,4 +136,8 @@ void stringFrto(int min_Value, int max_Value) {
             printf("%d ", storage[i]);
         } 
     }
+}
+
+void stringSoft() {
+    
 }
