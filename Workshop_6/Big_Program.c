@@ -75,7 +75,7 @@ int main() {
                 break;
         }
 
-    } while (key_control < 6);
+    } while (key_control < 5);
     
 
 }
@@ -140,29 +140,27 @@ void stringFrto(int min_Value, int max_Value) {
     }
 }
 
-void stringSort(int total_digit_string, int poiter) {
-
-    char *poiter_arr = NULL;
-    
-    *poiter_arr = poiter;
-
-    for (i = 0; i < total_digit_string - 1; i++)
-    {
-        for (j = i + 1; j < total_digit_string; i++)
-        {
-            if (*(poiter_arr + i) > *(poiter_arr + j))
-            {
-                trade = *(poiter_arr + i);
-                *(poiter_arr + i) = *(poiter_arr + j);
-                *(poiter_arr + j) = trade;
-            }   
+void stringSort(int n, int* ptr)
+{
+    int i, j, t;
+ 
+    // Sort the numbers using pointers
+    for (i = 0; i < n; i++) {
+ 
+        for (j = i + 1; j < n; j++) {
+ 
+            if (*(ptr + j) < *(ptr + i)) {
+ 
+                t = *(ptr + i);
+                *(ptr + i) = *(ptr + j);
+                *(ptr + j) = t;
+            }
         }
     }
-
-    for (i = 0; i < total_digit_string; i++) 
-    {
-        printf("%d ", *(poiter_arr + i));
-    }
+ 
+    // print the numbers
+    for (i = 0; i < n; i++)
+        printf("%d ", *(ptr + i));
 }
 
 //  Lỗi phân đoan ở case 5
