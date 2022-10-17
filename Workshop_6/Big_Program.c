@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int storage[100];
-int key_control, digit_string, i, j, trade;
+int key_control, digit_string, i, j;
 int digit_string_clone_begin = 0;
 int total_digit_string;
 int key_search;
@@ -66,6 +66,7 @@ int main() {
 
             case 5:
                 
+                printf("The string after sort is: ");
                 stringSort(total_digit_string, storage);
 
                 break;
@@ -142,7 +143,7 @@ void stringFrto(int min_Value, int max_Value) {
 
 void stringSort(int n, int* ptr)
 {
-    int i, j, t;
+    int t;
  
     // Sort the numbers using pointers
     for (i = 0; i < n; i++) {
