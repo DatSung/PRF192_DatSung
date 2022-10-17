@@ -32,7 +32,7 @@ int main() {
                 stringInput(digit_string);
                 printf("\n");
 
-                break;
+            break;
 
             case 2:
                 
@@ -42,7 +42,7 @@ int main() {
                 stringSearch(key_search);
                 printf("\n");
 
-                break;
+            break;
     
             case 3:
 
@@ -51,7 +51,7 @@ int main() {
                 stringShow(total_digit_string);
                 printf("\n");
 
-                break;
+            break;
 
             case 4:
                 
@@ -69,16 +69,14 @@ int main() {
                 printf("The string after sort is: ");
                 stringSort(total_digit_string, storage);
 
-                break;
+            break;
 
             default:
 
-                break;
+            break;
         }
 
     } while (key_control < 5);
-    
-
 }
 
 void menu() {
