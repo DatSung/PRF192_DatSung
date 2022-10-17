@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int storage[100];
-int key_control, digit_string, i;
+int key_control, digit_string, i, j, trade;
 int digit_string_clone_begin = 0;
 int total_digit_string;
 int key_search;
@@ -65,6 +65,8 @@ int main() {
                 break;
 
             case 5:
+                
+                stringSort(total_digit_string, storage);
 
                 break;
 
@@ -138,6 +140,29 @@ void stringFrto(int min_Value, int max_Value) {
     }
 }
 
-void stringSort() {
+void stringSort(int total_digit_string, int poiter) {
 
+    char *poiter_arr = NULL;
+    
+    *poiter_arr = poiter;
+
+    for (i = 0; i < total_digit_string - 1; i++)
+    {
+        for (j = i + 1; j < total_digit_string; i++)
+        {
+            if (*(poiter_arr + i) > *(poiter_arr + j))
+            {
+                trade = *(poiter_arr + i);
+                *(poiter_arr + i) = *(poiter_arr + j);
+                *(poiter_arr + j) = trade;
+            }   
+        }
+    }
+
+    for (i = 0; i < total_digit_string; i++) 
+    {
+        printf("%d ", *(poiter_arr + i));
+    }
 }
+
+//  Lỗi phân đoan ở case 5
