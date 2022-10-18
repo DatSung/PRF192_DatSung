@@ -85,8 +85,8 @@ void menu() {
     printf("WELCOME TO ARRAY SIMULATION\n");
     printf("Option (1) Add values\n");
     printf("Option (2) Search value\n");
-    printf("Option (3) Add values\n");
-    printf("Option (4) Add values\n");
+    printf("Option (3) Print string\n");
+    printf("Option (4) Print string from to\n");
     printf("Option (5) Sort string\n");
     printf("Press other key to quit\n");
     printf("Please choose your option: ");
