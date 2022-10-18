@@ -161,5 +161,3 @@ void stringSort(int n, int* ptr)
     for (i = 0; i < n; i++)
         printf("%d ", *(ptr + i));
 }
-
-//  Lỗi phân đoan ở case 5
