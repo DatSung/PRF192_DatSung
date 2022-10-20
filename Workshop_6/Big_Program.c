@@ -75,7 +75,7 @@ int main() {
 
             break;
         }
-
+        
     } while (key_control < 5);
 }
 
