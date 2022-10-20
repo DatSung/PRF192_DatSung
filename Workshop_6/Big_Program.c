@@ -68,7 +68,7 @@ int main() {
                 
                 printf("The string after sort is: ");
                 stringSort(total_digit_string, storage);
-
+            
             break;
 
             default:
