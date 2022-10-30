@@ -15,6 +15,10 @@ int main() {
     lbTriangle(size);
     printf("\n");
     luTriangle(size);
+    printf("\n");
+    rbTriangle(size);
+    printf("\n");
+    ruTriangle(size);
 }
 
 void lbTriangle(int size) {
@@ -46,10 +50,42 @@ void luTriangle(int size) {
     }
 }
 
-void rbTriangle() {
+void rbTriangle(int size) {
+    int i, j;
+
+    for (i = size; i >= 0; i--)
+    {
+        for (j = size; j > i; j--)
+        {
+            printf(" ");
+        }
+
+        for (j = 0; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
     
 }
 
-void ruTriangle() {
+void ruTriangle(int size) {
+
+    int i, j;
+
+    for (i = 0; i < size; i++)
+    {
+        for (j = size; j > i; j--)
+        {
+            printf(" ");
+        }
+
+        for (j = 0; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    
 
 }
