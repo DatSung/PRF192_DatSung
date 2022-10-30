@@ -23,6 +23,5 @@ int main() {
             square = square * *(ptr + i);
         }
     }
-
     printf("%d", square);
 }
