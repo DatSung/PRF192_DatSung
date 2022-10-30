@@ -20,7 +20,7 @@ void palindromesChecker(int num_enter) {
     {
         ram = num_enter_clone % 10;
         sum = (sum * 10) + ram;
-        num_enter_clone = num_enter_clone  / 10;
+        num_enter_clone = num_enter_clone / 10;
     }   
 
     if (num_enter == sum)
