@@ -26,11 +26,7 @@ int main() {
                     max = arr[i];
                 }
             }
-            
         }
-        
     }
-
     printf(" Max even number in array is: %d", max);
-    
 }
