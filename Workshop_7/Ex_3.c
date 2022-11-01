@@ -3,7 +3,9 @@
 void palindromesChecker();
 
 int main() {
+
     int num_enter;
+    
     printf("PLease enter a number: ");
     scanf("%d", &num_enter);
     palindromesChecker(num_enter);
