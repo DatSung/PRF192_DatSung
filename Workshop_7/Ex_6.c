@@ -86,6 +86,4 @@ void ruTriangle(int size) {
         }
         printf("\n");
     }
-    
-
 }
