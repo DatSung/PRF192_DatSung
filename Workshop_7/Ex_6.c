@@ -33,7 +33,6 @@ void lbTriangle(int size) {
         }
         printf("\n");
     }
-    
 }
 
 void luTriangle(int size) {
