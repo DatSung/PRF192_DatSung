@@ -126,7 +126,7 @@ int main()
 }
 
 void menuTable()
-{   
+{
     printf("------------------------------------------------------------------------------------------------------------\n");
     printf("[1] Find the sum of the series 1+3+5+7+...\n");
     printf("[2] Find the sum of the series 1+1/2+1/3+1/4+...\n");
@@ -302,11 +302,12 @@ void printASCII()
     printf("\n \n");
 }
 
-void printSumPos() {
+void printSumPos()
+{
     int number_enter, sum;
     sum = 0;
     do
-    {   
+    {
         printf("\nInput a number: ");
         scanf("%d", &number_enter);
         sum += number_enter;
